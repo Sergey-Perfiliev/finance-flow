@@ -1,0 +1,64 @@
+@import '../../styles/variables';
+
+.home-page {
+	background-color: $color-light;
+	min-height: 100vh;
+
+	&_header {
+		margin-bottom: 16px;
+		margin-top: 16px;
+	}
+
+	&_subtitle {
+		font-weight: 500;
+		text-transform: uppercase;
+	}
+
+	&_footer {
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		background-color: $color-light;
+		color: black;
+		border-top: 1px solid $color-secondary;
+		padding: $padding-s;
+
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
+
+.heading-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.diagram-content {
+	border-radius: $border-radius;
+	padding: 16px;
+	background-color: $color-white;
+
+	&_text-wrapper {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+
+		&_item {
+			flex: 1;
+			margin-right: 5%;
+			list-style: none;
+		}
+	}
+}
+
+.diagram {
+	display: flex;
+	padding: $padding-s $padding-xs 0 $padding-xs;
+
+	progress {
+		flex: 1;
+	}
+}

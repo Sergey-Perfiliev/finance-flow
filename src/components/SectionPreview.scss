@@ -1,0 +1,60 @@
+@import '../styles/variables';
+
+.section-preview {
+	&:not(:first-child) {
+		margin-top: 40px;
+	}
+
+	&_wrapper {
+		margin-top: 24px;
+	}
+
+	&_heading-wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&_diagram {
+		flex: 1;
+
+		.CircularProgressbar-path {
+			stroke: $color-primary;
+		}
+	}
+
+	&_info {
+		margin-top: 16px;
+		background-color: $color-white;
+		border-radius: $border-radius;
+		padding: 16px;
+
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+
+		&-content {
+			margin-left: 20px;
+			flex: 2;
+
+			h4 {
+				font-size: 20px;
+			}
+
+			h3 {
+				font-size: 18px;
+				line-height: 1.5;
+			}
+		}
+	}
+
+	&_button {
+		color: $color-primary;
+		border: none;
+		font-size: 16px;
+		background-color: transparent;
+		padding: 12px 16px;
+		width: 100%;
+		cursor: pointer;
+	}
+}
