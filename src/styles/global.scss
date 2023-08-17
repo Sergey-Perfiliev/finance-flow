@@ -37,8 +37,12 @@ body {
 	cursor: pointer;
 
 	padding: 4px;
-	background-color: $color-secondary;
+	background-color: $color-white;
 	border-radius: 100%;
+
+	svg {
+		color: darken($color-secondary, 30);
+	}
 
 	&-inner {
 		display: grid;
@@ -87,6 +91,10 @@ body {
 	&:hover {
 		background-color: $color-primary;
 		color: $color-white;
+
+		span > svg {
+			color: $color-white;
+		}
 	}
 
 	.icon {

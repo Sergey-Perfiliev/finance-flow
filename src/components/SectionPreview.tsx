@@ -21,13 +21,13 @@ const SectionPreview = (props: SectionPreviewData) => {
 					<CircleProgressBar />
 				</div>
 				<div className='section-preview_info-content'>
-					<h4>{info.title}</h4>
-					<h3 className='heading-tertiary'>
+					<h3>{info.title}</h3>
+					<h4 className='heading-subtitle'>
 						Цель: <span>{info.goal}</span>
-					</h3>
-					<h3 className='heading-tertiary'>
+					</h4>
+					<h4 className='heading-subtitle'>
 						Накопили: <span>{info.target}</span>
-					</h3>
+					</h4>
 				</div>
 			</div>
 		</div>

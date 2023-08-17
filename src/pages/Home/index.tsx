@@ -13,7 +13,7 @@ const Home = () => {
 		<div className='home-page'>
 			<div className='page-inner'>
 				<header className='home-page_header'>
-					<h3 className='heading-subtitle home-page_subtitle'>Профиль: Счёт</h3>
+					<h4 className='heading-subtitle home-page_subtitle'>Профиль: Счёт</h4>
 					<div className='heading-wrapper'>
 						<h1 className='heading-primary'>Финансы</h1>
 						<div className='icon-wrapper'>
@@ -28,13 +28,13 @@ const Home = () => {
 								<h2 className='heading-secondary heading-secondary_list-title'>
 									54703 &#x20bd;
 								</h2>
-								<h3 className='heading-subtitle'>Доход в месяц</h3>
+								<h4 className='heading-subtitle'>Доход в месяц</h4>
 							</li>
 							<li className='diagram-content_text-wrapper_item'>
 								<h2 className='heading-secondary heading-secondary_list-title'>
 									43256 &#x20bd;
 								</h2>
-								<h3 className='heading-subtitle'>Расход в месяц</h3>
+								<h4 className='heading-subtitle'>Расход в месяц</h4>
 							</li>
 						</ul>
 						<div className='diagram'>
@@ -53,7 +53,7 @@ const Home = () => {
 				</main>
 				<footer className='home-page_footer'>
 					<div>
-						<h3 className='heading-subtitle'>Остаток</h3>
+						<h4 className='heading-subtitle'>Остаток</h4>
 						<h2 className='heading-secondary'>1325 &#x20bd;</h2>
 					</div>
 					<div className='icon-wrapper icon-wrapper--primary' role='button'>
