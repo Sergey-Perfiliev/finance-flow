@@ -1,0 +1,56 @@
+@import '../../styles/variables';
+
+.button {
+	padding: $padding-component;
+	cursor: pointer;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	font-family: inherit;
+	border: none;
+	border-radius: $border-radius;
+
+	color: $color-primary;
+	background-color: $color-white;
+	transition: all 0.2s ease;
+
+	&:hover {
+		background-color: $color-primary;
+		color: $color-white;
+
+		span > svg {
+			color: $color-white;
+		}
+	}
+
+	.icon {
+		width: 24px;
+
+		svg {
+			color: $color-primary;
+		}
+	}
+
+	.text {
+		margin-left: 4px;
+		font-family: inherit;
+		color: inherit;
+	}
+
+	&--primary {
+		color: $color-primary;
+		background-color: $color-white;
+	}
+
+	&--primary-reverse {
+		color: $color-white;
+		background-color: $color-primary;
+	}
+
+	&--secondary {
+		color: $color-primary;
+		background-color: $color-bg-component;
+	}
+}

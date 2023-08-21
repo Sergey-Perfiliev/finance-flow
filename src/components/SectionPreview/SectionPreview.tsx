@@ -1,5 +1,5 @@
-import { SectionPreviewData } from '../data'
-import CircleProgressBar from './CircleProgressBar'
+import { SectionPreviewData } from '../../data'
+import CircleProgressBar from '../CircleProgessBar/CircleProgressBar'
 import './SectionPreview.scss'
 
 const SectionPreview = (props: SectionPreviewData) => {
@@ -20,8 +20,8 @@ const SectionPreview = (props: SectionPreviewData) => {
 				<div className='section-preview_diagram'>
 					<CircleProgressBar />
 				</div>
-				<div className='section-preview_info-content'>
-					<h3>{info.title}</h3>
+				<div className='section-preview_info-content component-inner'>
+					<h3 className='heading-tertiary'>{info.title}</h3>
 					<h4 className='heading-subtitle'>
 						Цель: <span>{info.goal}</span>
 					</h4>

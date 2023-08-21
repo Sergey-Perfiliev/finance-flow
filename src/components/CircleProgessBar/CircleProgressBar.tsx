@@ -1,6 +1,6 @@
 import { CircularProgressbarWithChildren } from 'react-circular-progressbar'
 import 'react-circular-progressbar/dist/styles.css'
-import { ReactComponent as DollarSvg } from '../assets/icons/dollar-circle.svg'
+import { ReactComponent as DollarSvg } from '../../assets/icons/dollar-circle.svg'
 
 type Props = {
 	width?: number

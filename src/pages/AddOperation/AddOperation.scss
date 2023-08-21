@@ -1,0 +1,134 @@
+@import '../../styles/variables';
+
+.add-operation {
+	&_header {
+		position: relative;
+		width: 100%;
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: $padding-s;
+
+		.heading-tertiary {
+			position: absolute;
+			left: 50%;
+
+			transform: translateX(-50%);
+		}
+	}
+
+	&_footer {
+		display: grid;
+		padding: $padding-s;
+		background-color: $color-light;
+	}
+
+	&-form {
+		flex: 1;
+
+		display: flex;
+		flex-direction: column;
+
+		&_section {
+			padding: $padding-s;
+
+			&-secondary {
+				flex: 1;
+				background-color: $color-light;
+
+				.heading-subtitle {
+					padding: 4px 0;
+					margin-left: $margin-xs;
+				}
+			}
+		}
+
+		&_item {
+			&:not(:first-child) {
+				margin-top: $margin-m;
+			}
+
+			.heading-secondary {
+				margin-bottom: calc($margin-xs / 2);
+			}
+		}
+	}
+
+	&_additional-content {
+		display: flex;
+		flex-direction: column;
+		padding: 0 $padding-s;
+		background-color: $color-white;
+		border-radius: $border-radius;
+
+		.item {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			height: 50px;
+
+			&:not(:last-child) {
+				border-bottom: 1px solid $color-light;
+			}
+		}
+	}
+}
+
+.sum-amount-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	height: 44px;
+
+	&_input {
+		flex: 1;
+		background-color: $color-bg-component;
+		border: none;
+		outline: none;
+		border-radius: $border-radius;
+		padding: $padding-component;
+		height: 100%;
+		font-family: inherit;
+		font-weight: 400;
+
+		transition: all 0.2s ease;
+	}
+
+	&_button {
+		display: grid;
+		place-items: center;
+
+		aspect-ratio: 1;
+		height: 100%;
+
+		border: none;
+		outline: none;
+		border-radius: $border-radius;
+	}
+}
+
+.fin-balance-wrapper {
+	display: flex;
+	align-items: center;
+	margin-top: $margin-xs;
+	gap: 12px;
+}
+
+.category-button {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	background-color: $color-bg-component;
+	border-radius: $border-radius;
+	padding: $padding-s $padding-xs;
+	gap: $margin-xs;
+
+	svg {
+		width: 40px;
+		height: 40px;
+
+		color: $color-secondary;
+	}
+}

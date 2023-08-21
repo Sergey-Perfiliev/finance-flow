@@ -2,12 +2,14 @@
 
 .home-page {
 	background-color: $color-light;
-	min-height: 100vh;
-	padding-bottom: 90px;
+
+	&_header,
+	&_footer,
+	&_content {
+		padding: $padding-s;
+	}
 
 	&_header {
-		margin-bottom: 16px;
-		margin-top: 16px;
 	}
 
 	&_subtitle {
@@ -15,19 +17,27 @@
 		text-transform: uppercase;
 	}
 
+	&_content {
+		flex: 1;
+		overflow: auto;
+	}
+
 	&_footer {
-		position: fixed;
-		left: 0;
-		bottom: 0;
 		width: 100%;
 		background-color: $color-light;
 		color: black;
 		border-top: 1px solid $color-secondary;
-		padding: $padding-s;
 
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+	}
+
+	.page-inner {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		padding: 0;
 	}
 }
 

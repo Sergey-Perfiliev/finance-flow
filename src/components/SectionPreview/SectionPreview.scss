@@ -1,4 +1,4 @@
-@import '../styles/variables';
+@import '../../styles/variables';
 
 .section-preview {
 	&:not(:first-child) {
@@ -36,15 +36,6 @@
 		&-content {
 			margin-left: 20px;
 			flex: 2;
-
-			h3 {
-				font-size: 20px;
-			}
-
-			h4 {
-				font-size: 18px;
-				line-height: 1.5;
-			}
 		}
 	}
 

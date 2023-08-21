@@ -11,6 +11,20 @@
 	box-sizing: inherit;
 }
 
+label[for],
+input[type='radio'],
+input[type='checkbox'],
+button,
+div[role='button'],
+input[type='reset'],
+input[type='button'],
+input[type='submit'] {
+	cursor: pointer;
+}
+input[type='file']::-webkit-file-upload-button {
+	cursor: pointer;
+}
+
 // html {
 // 	// define 1rem -> 10px
 // 	font-size: 62.5%;
@@ -27,38 +41,80 @@ body {
 	color: $color-light;
 }
 
+// pages
+
 .page-inner {
-	padding: 18px;
+	padding: $padding-s;
 }
+
+.home-page,
+.add-operation-page {
+	height: 100vh;
+}
+
+.home-page {
+}
+
+.add-operation-page {
+	display: flex;
+	flex-direction: column;
+}
+
+//
 
 .icon-wrapper {
 	display: grid;
 	place-items: center;
 	cursor: pointer;
 
+	border: none;
+	outline: none;
+
 	padding: 4px;
-	background-color: $color-white;
+	background-color: $color-bg-icon;
 	border-radius: 100%;
 
 	svg {
 		color: darken($color-secondary, 30);
 	}
 
-	&-inner {
+	&_inner {
 		display: grid;
 		place-content: center;
 		width: 24px;
 		height: 24px;
 		font-size: 24px;
 		color: $color-white;
+
+		&--small {
+			display: grid;
+			place-content: center;
+			background: $color-white;
+			width: 18px;
+			color: $color-primary;
+			border-radius: 50%;
+			place-items: center;
+			font-size: 18px;
+			line-height: 1;
+			aspect-ratio: 1;
+			padding: 0;
+		}
 	}
 
 	&--primary {
 		background-color: $color-primary;
+
+		svg {
+			color: $color-white;
+		}
 	}
 }
 
 // buttons
+
+button {
+	cursor: pointer;
+}
 
 .buttons-wrapper {
 	display: flex;
@@ -72,42 +128,12 @@ body {
 	}
 }
 
-.primary-button {
-	padding: 12px 20px;
-	cursor: pointer;
-
-	display: flex;
-	align-items: center;
-	justify-content: center;
-
-	font-family: inherit;
-	border: none;
-	border-radius: $border-radius;
-
-	color: $color-primary;
-	background-color: $color-white;
-	transition: all 0.2s ease;
-
-	&:hover {
-		background-color: $color-primary;
-		color: $color-white;
-
-		span > svg {
-			color: $color-white;
-		}
+.component-inner {
+	.heading-tertiary {
+		font-size: 20px;
 	}
 
-	.icon {
-		width: 24px;
-
-		svg {
-			color: $color-primary;
-		}
-	}
-
-	.text {
-		margin-left: 4px;
-		font-family: inherit;
-		color: inherit;
+	.heading-subtitle {
+		line-height: 1.5;
 	}
 }
