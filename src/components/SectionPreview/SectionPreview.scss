@@ -1,29 +1,31 @@
 @import '../../styles/variables';
+@import '../../styles/global.scss';
 
 .section-preview {
 	&:not(:first-child) {
 		margin-top: 40px;
 	}
 
-	&_wrapper {
+	&__wrapper {
 		margin-top: 24px;
 	}
 
-	&_heading-wrapper {
+	&__heading-wrapper {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 	}
 
-	&_diagram {
+	&__diagram {
 		flex: 1;
+		color: $color-primary;
 
 		.CircularProgressbar-path {
-			stroke: $color-primary;
+			stroke: currentColor;
 		}
 	}
 
-	&_info {
+	&__info {
 		margin-top: 16px;
 		background-color: $color-white;
 		border-radius: $border-radius;
@@ -34,12 +36,13 @@
 		align-items: center;
 
 		&-content {
+			@include component-inner;
 			margin-left: 20px;
 			flex: 2;
 		}
 	}
 
-	&_button {
+	&__button {
 		color: $color-primary;
 		border: none;
 		font-size: 16px;

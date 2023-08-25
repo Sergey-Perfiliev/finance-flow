@@ -43,26 +43,26 @@ const AddOperationForm = () => {
 	}
 
 	return (
-		<form className='add-operation-form' role='form'>
-			<section className='add-operation-form_section add-operation-form_section-main'>
-				<div className='add-operation-form_item'>
+		<form className='add-operation__form' role='form'>
+			<section className='add-operation__form-section add-operation__form-section--main'>
+				<div className='add-operation__form-item'>
 					<h2 className='heading-secondary'>Сумма</h2>
-					<div className='sum-amount-wrapper'>
+					<div className='add-operation__amount'>
 						<input
 							value={amount ?? ''}
 							onChange={setAmountHandler}
 							type='number'
 							placeholder={`${finType === 'consumption' ? '-' : '+'}1000` + '₽'}
-							className='sum-amount-wrapper_input'
+							className='add-operation__amount-input'
 						/>
 						<button
-							className='sum-amount-wrapper_button'
+							className='add-operation__amount-button'
 							type='button'
 							onClick={clearAmountHandler}>
 							<CloseIcon color='transparent' />
 						</button>
 					</div>
-					<div className='buttons-wrapper fin-balance-wrapper'>
+					<div className='buttons-wrapper fin-balance'>
 						<Button
 							onClick={() => setFinType('income')}
 							text='Доход'
@@ -79,23 +79,23 @@ const AddOperationForm = () => {
 						/>
 					</div>
 				</div>
-				<div className='add-operation-form_item'>
+				<div className='add-operation__form-item'>
 					<h2 className='heading-secondary'>Назначение</h2>
 					<div
 						className='category-button'
 						role='button'
 						onClick={setCategoryHandler}>
 						<CategoryItem />
-						<div className='component-inner'>
+						<div className='category-button__content'>
 							<h3>Категория</h3>
 							<h4 className='heading-subtitle'>Выберите категорию</h4>
 						</div>
 					</div>
 				</div>
 			</section>
-			<section className='add-operation-form_section add-operation-form_section-secondary'>
+			<section className='add-operation__form-section add-operation__form-section--secondary'>
 				<h4 className='heading-subtitle'>Дополнительно</h4>
-				<div className='add-operation_additional-content'>
+				<div className='add-operation__additional-content'>
 					<label className='item'>
 						<h5 className='heading-subcategory'>Дата</h5>
 						<DatePicker selected={date} onChange={(date) => setDate(date)} />
@@ -107,7 +107,7 @@ const AddOperationForm = () => {
 					{isNote && <textarea />}
 				</div>
 			</section>
-			<footer className='footer add-operation_footer'>
+			<footer className='footer add-operation__footer'>
 				<Button
 					text='Добавить'
 					type='button'
@@ -125,7 +125,7 @@ const AddOperation = () => {
 
 	return (
 		<div className='add-operation-page'>
-			<header className='add-operation_header'>
+			<header className='add-operation__header'>
 				<div>
 					<IconButton onClick={() => navigate('/')} icon={<BackIcon />} />
 				</div>

@@ -1,5 +1,6 @@
+import { ReactComponent as DollarSvg } from '../../assets/icons/dollar-circle.svg'
 import { SectionPreviewData } from '../../data'
-import CircleProgressBar from '../CircleProgessBar/CircleProgressBar'
+import CircleProgressBar from '../CircleProgressBar/CircleProgressBar'
 import './SectionPreview.scss'
 
 const SectionPreview = (props: SectionPreviewData) => {
@@ -7,20 +8,27 @@ const SectionPreview = (props: SectionPreviewData) => {
 
 	return (
 		<div className='section-preview'>
-			<div className='section-preview_heading-wrapper'>
+			<div className='section-preview__heading-wrapper'>
 				<div>
 					<h2 className='heading-secondary'>{title}</h2>
 					<h3 className='heading-subtitle'>{subtitle}</h3>
 				</div>
-				<div className='section-preview_button-wrapper'>
-					<button className='section-preview_button'>См. все</button>
+				<div className='section-preview__button-wrapper'>
+					<button className='section-preview__button'>См. все</button>
 				</div>
 			</div>
-			<div className='section-preview_info'>
-				<div className='section-preview_diagram'>
-					<CircleProgressBar />
+			<div className='section-preview__info'>
+				<div className='section-preview__diagram'>
+					<CircleProgressBar
+						value={77}
+						icon={
+							<>
+								<DollarSvg width={54} height={54} />
+							</>
+						}
+					/>
 				</div>
-				<div className='section-preview_info-content component-inner'>
+				<div className='section-preview__info-content component-inner'>
 					<h3 className='heading-tertiary'>{info.title}</h3>
 					<h4 className='heading-subtitle'>
 						Цель: <span>{info.goal}</span>

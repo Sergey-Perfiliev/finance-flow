@@ -19,22 +19,18 @@
 	&:hover {
 		background-color: $color-primary;
 		color: $color-white;
-
-		span > svg {
-			color: $color-white;
-		}
 	}
 
 	.icon {
 		width: 24px;
+		margin-right: 4px;
 
 		svg {
-			color: $color-primary;
+			color: currentColor;
 		}
 	}
 
 	.text {
-		margin-left: 4px;
 		font-family: inherit;
 		color: inherit;
 	}

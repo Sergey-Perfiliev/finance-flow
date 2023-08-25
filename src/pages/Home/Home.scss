@@ -3,13 +3,13 @@
 .home-page {
 	background-color: $color-light;
 
-	&_header,
-	&_footer,
-	&_content {
+	&__header,
+	&__footer,
+	&__content {
 		padding: $padding-s;
 	}
 
-	&_header {
+	&__header {
 	}
 
 	&_subtitle {
@@ -17,12 +17,12 @@
 		text-transform: uppercase;
 	}
 
-	&_content {
+	&__content {
 		flex: 1;
 		overflow: auto;
 	}
 
-	&_footer {
+	&__footer {
 		width: 100%;
 		background-color: $color-light;
 		color: black;
@@ -47,21 +47,21 @@
 	align-items: center;
 }
 
-.diagram-content {
+.flow-info {
 	border-radius: $border-radius;
 	padding: 16px;
 	background-color: $color-white;
+}
 
-	&_text-wrapper {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
+.flow-content {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 
-		&_item {
-			flex: 1;
-			margin-right: 5%;
-			list-style: none;
-		}
+	&__item {
+		flex: 1;
+		margin-right: 5%;
+		list-style: none;
 	}
 }
 

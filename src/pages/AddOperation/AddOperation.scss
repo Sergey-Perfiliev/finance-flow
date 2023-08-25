@@ -1,7 +1,8 @@
 @import '../../styles/variables';
+@import '../../styles/global.scss';
 
 .add-operation {
-	&_header {
+	&__header {
 		position: relative;
 		width: 100%;
 
@@ -18,44 +19,13 @@
 		}
 	}
 
-	&_footer {
+	&__footer {
 		display: grid;
 		padding: $padding-s;
 		background-color: $color-light;
 	}
 
-	&-form {
-		flex: 1;
-
-		display: flex;
-		flex-direction: column;
-
-		&_section {
-			padding: $padding-s;
-
-			&-secondary {
-				flex: 1;
-				background-color: $color-light;
-
-				.heading-subtitle {
-					padding: 4px 0;
-					margin-left: $margin-xs;
-				}
-			}
-		}
-
-		&_item {
-			&:not(:first-child) {
-				margin-top: $margin-m;
-			}
-
-			.heading-secondary {
-				margin-bottom: calc($margin-xs / 2);
-			}
-		}
-	}
-
-	&_additional-content {
+	&__additional-content {
 		display: flex;
 		flex-direction: column;
 		padding: 0 $padding-s;
@@ -73,43 +43,74 @@
 			}
 		}
 	}
+
+	&__amount {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 12px;
+		height: 44px;
+
+		&-input {
+			flex: 1;
+			background-color: $color-bg-component;
+			border: none;
+			outline: none;
+			border-radius: $border-radius;
+			padding: $padding-component;
+			height: 100%;
+			font-family: inherit;
+			font-weight: 400;
+
+			transition: all 0.2s ease;
+		}
+
+		&-button {
+			display: grid;
+			place-items: center;
+
+			aspect-ratio: 1;
+			height: 100%;
+
+			border: none;
+			outline: none;
+			border-radius: $border-radius;
+		}
+	}
 }
 
-.sum-amount-wrapper {
+.add-operation__form {
+	flex: 1;
+
 	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	gap: 12px;
-	height: 44px;
+	flex-direction: column;
 
-	&_input {
-		flex: 1;
-		background-color: $color-bg-component;
-		border: none;
-		outline: none;
-		border-radius: $border-radius;
-		padding: $padding-component;
-		height: 100%;
-		font-family: inherit;
-		font-weight: 400;
+	&-section {
+		padding: $padding-s;
 
-		transition: all 0.2s ease;
+		&--secondary {
+			flex: 1;
+			background-color: $color-light;
+
+			.heading-subtitle {
+				padding: 4px 0;
+				margin-left: $margin-xs;
+			}
+		}
 	}
 
-	&_button {
-		display: grid;
-		place-items: center;
+	&-item {
+		&:not(:first-child) {
+			margin-top: $margin-m;
+		}
 
-		aspect-ratio: 1;
-		height: 100%;
-
-		border: none;
-		outline: none;
-		border-radius: $border-radius;
+		.heading-secondary {
+			margin-bottom: calc($margin-xs / 2);
+		}
 	}
 }
 
-.fin-balance-wrapper {
+.fin-balance {
 	display: flex;
 	align-items: center;
 	margin-top: $margin-xs;
@@ -130,5 +131,9 @@
 		height: 40px;
 
 		color: $color-secondary;
+	}
+
+	&__content {
+		@include component-inner;
 	}
 }
