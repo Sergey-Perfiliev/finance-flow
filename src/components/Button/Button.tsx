@@ -7,7 +7,8 @@ type Props = React.ButtonHTMLAttributes<HTMLButtonElement> & {
 }
 
 const Button = ({ icon, text, btnType, ...props }: Props) => {
-	const buttonClass = `button${btnType ? ' button--' + btnType : ''}`
+	const typeClass = `${btnType ? ' button--' + btnType : ''}`
+	const buttonClass = `button${typeClass}`
 
 	return (
 		<button className={buttonClass} {...props}>
